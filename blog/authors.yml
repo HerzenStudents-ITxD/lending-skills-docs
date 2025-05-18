@@ -1,0 +1,56 @@
+yangshun:
+  name: Yangshun Tay
+  title: Front End Engineer @ Facebook
+  url: https://github.com/yangshun
+  image_url: https://github.com/yangshun.png
+  page: true
+  socials:
+    x: yangshunz
+    github: yangshun
+
+slorber:
+  name: Sébastien Lorber
+  title: Docusaurus maintainer
+  url: https://sebastienlorber.com
+  image_url: https://github.com/slorber.png
+  page:
+    # customize the url of the author page at /blog/authors/<permalink>
+    permalink: '/all-sebastien-lorber-articles'
+  socials:
+    x: sebastienlorber
+    linkedin: sebastienlorber
+    github: slorber
+    newsletter: https://thisweekinreact.com
+
+nadya:
+  name: Надежда
+  title: База преподавателей
+  image_url: /img/team/nadya.png
+alisa:
+  name: Алиса
+  title: Фронтенд скиллс-паспорта
+  image_url: /img/team/alisa.png
+darina:
+  name: Дарина
+  title: Организация галереи
+  image_url: /img/team/darina.png
+olesya:
+  name: Олеся
+  title: Отзывы
+  image_url: /img/team/olesya.png
+maria:
+  name: Мария
+  title: Формы заполнения
+  image_url: /img/team/maria.png
+yana:
+  name: Яна
+  title: Тимлид фронтенда
+  image_url: /img/team/yana.png
+olegg:
+  name: Олег
+  title: Бэкенд скиллс-паспорта
+  image_url: /img/team/olegg.png
+artem:
+  name: Артём
+  title: Документация
+  image_url: /img/team/artem.png

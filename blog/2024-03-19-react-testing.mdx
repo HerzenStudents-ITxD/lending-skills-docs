@@ -1,0 +1,110 @@
+---
+slug: react-testing
+title: "Тестирование React приложений: от компонентов до интеграции"
+authors: [maria]
+date: 2024-03-19
+tags: [react, testing, frontend, разработка]
+description: "Подробное руководство по тестированию React приложений с использованием Jest и React Testing Library."
+---
+
+# Тестирование React приложений: от компонентов до интеграции
+
+> "Хороший тест — это как хороший вопрос: он помогает понять, что мы действительно знаем."
+
+В этой статье мы рассмотрим различные подходы к тестированию React приложений, от модульных тестов до интеграционного тестирования.
+
+<!-- truncate -->
+
+## Тестирование компонентов
+
+### Базовый тест компонента
+
+```jsx
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import Счетчик from './Счетчик';
+
+test('счетчик увеличивается при нажатии кнопки', async () => {
+  render(<Счетчик />);
+  
+  const кнопка = screen.getByRole('button', { name: /увеличить/i });
+  const счетчик = screen.getByText(/счётчик: 0/i);
+  
+  await userEvent.click(кнопка);
+  
+  expect(screen.getByText(/счётчик: 1/i)).toBeInTheDocument();
+});
+```
+
+### Тестирование асинхронных операций
+
+```jsx
+import { render, screen, waitFor } from '@testing-library/react';
+import ПолучениеДанных from './ПолучениеДанных';
+
+test('отображает данные после загрузки', async () => {
+  render(<ПолучениеДанных />);
+  
+  expect(screen.getByText(/загрузка/i)).toBeInTheDocument();
+  
+  await waitFor(() => {
+    expect(screen.getByText(/данные загружены/i)).toBeInTheDocument();
+  });
+});
+```
+
+## Моки и стабы
+
+```jsx
+import { render, screen } from '@testing-library/react';
+import ПрофильПользователя from './ПрофильПользователя';
+
+// Мок API
+jest.mock('./api', () => ({
+  получитьПользователя: () => Promise.resolve({
+    имя: 'Иван',
+    почта: 'ivan@example.com'
+  })
+}));
+
+test('отображает данные пользователя', async () => {
+  render(<ПрофильПользователя idПользователя="123" />);
+  
+  await screen.findByText(/иван/i);
+  expect(screen.getByText(/ivan@example.com/i)).toBeInTheDocument();
+});
+```
+
+## Интеграционное тестирование
+
+```jsx
+import { render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
+import Приложение from './Приложение';
+
+test('полный поток авторизации', async () => {
+  render(
+    <BrowserRouter>
+      <Приложение />
+    </BrowserRouter>
+  );
+  
+  // Тестирование полного потока
+  await userEvent.click(screen.getByText(/войти/i));
+  await userEvent.type(screen.getByLabelText(/почта/i), 'test@example.com');
+  await userEvent.type(screen.getByLabelText(/пароль/i), 'password123');
+  await userEvent.click(screen.getByRole('button', { name: /отправить/i }));
+  
+  expect(screen.getByText(/добро пожаловать/i)).toBeInTheDocument();
+});
+```
+
+## Заключение
+
+Тестирование — важная часть разработки React приложений. Оно помогает:
+- Находить ошибки на ранних этапах
+- Обеспечивать рефакторинг без регрессий
+- Документировать поведение компонентов
+- Улучшать архитектуру приложения
+
+> Пишите тесты, которые проверяют поведение, а не реализацию. Это сделает ваши тесты более устойчивыми к изменениям! 

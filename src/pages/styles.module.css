@@ -1,0 +1,31 @@
+.faqSection {
+  margin-bottom: 3rem;
+}
+
+.faqItem {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background-color: var(--ifm-background-surface-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faqItem h3 {
+  color: var(--ifm-color-primary);
+  margin-bottom: 1rem;
+}
+
+.faqItem p {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.faqItem ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  padding-left: 1.5rem;
+}
+
+.faqItem li {
+  margin-bottom: 0.5rem;
+} 

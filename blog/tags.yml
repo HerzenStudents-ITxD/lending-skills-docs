@@ -1,0 +1,54 @@
+facebook:
+  label: Facebook
+  permalink: /facebook
+  description: Facebook tag description
+
+hello:
+  label: Hello
+  permalink: /hello
+  description: Hello tag description
+
+docusaurus:
+  label: Docusaurus
+  permalink: /docusaurus
+  description: Docusaurus tag description
+
+hola:
+  label: Hola
+  permalink: /hola
+  description: Hola tag description
+
+react:
+  label: React
+  description: Статьи о React и его экосистеме
+  permalink: /blog/tags/react
+
+hooks:
+  label: Hooks
+  description: Статьи о React Hooks
+  permalink: /blog/tags/hooks
+
+frontend:
+  label: Frontend
+  description: Статьи о фронтенд разработке
+  permalink: /blog/tags/frontend
+
+разработка:
+  label: Разработка
+  description: Статьи о разработке программного обеспечения
+  permalink: /blog/tags/разработка
+
+performance:
+  label: Производительность
+  description: Статьи об оптимизации производительности
+  permalink: /blog/tags/performance
+
+оптимизация:
+  label: Оптимизация
+  description: Статьи об оптимизации кода и приложений
+  permalink: /blog/tags/оптимизация
+
+testing:
+  label: Тестирование
+  description: Статьи о тестировании приложений
+  permalink: /blog/tags/testing
