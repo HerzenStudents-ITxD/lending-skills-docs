@@ -8,7 +8,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: #433cff;
+  background: url('/img/grad.png') center/cover no-repeat;
   color: #fff;
 }
 
@@ -42,14 +42,18 @@
   padding: 0.9rem 2.2rem;
   box-shadow: 0 2px 8px rgba(67,60,255,0.08);
   cursor: pointer;
-  transition: background 0.18s, color 0.18s, transform 0.12s;
+  transition: all 0.3s ease;
   text-decoration: none;
   margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
 
-.heroBtn:hover {
-  background: #ecebff;
-  color: #2a24b7;
+.heroBtn:hover,
+.heroBtn:hover a {
+  background: #ACDA46;
+  color: #fff !important;
   transform: translateY(-2px) scale(1.04);
 }
 
@@ -248,13 +252,17 @@
   border: none;
   border-radius: 1rem;
   padding: 0.7rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
   text-decoration: none;
-  transition: background 0.18s, transform 0.12s;
 }
 
-.teamMoreBtn:hover {
+.teamMoreBtn:hover,
+.teamMoreBtn:hover a {
   background: #ACDA46;
-  transform: scale(1.04);
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(67,60,255,0.2);
 }
 
 .howToStartSection {
@@ -311,12 +319,13 @@
   font-weight: 600;
   color: #433cff;
   text-decoration: none;
-  transition: background 0.18s, color 0.18s, transform 0.12s;
+  transition: all 0.3s ease;
 }
 
-.contactCard:hover {
-  background: #ecebff;
-  color: #2a24b7;
+.contactCard:hover,
+.contactCard:hover a {
+  background: #ACDA46;
+  color: #fff !important;
   transform: translateY(-3px) scale(1.04);
 }
 
