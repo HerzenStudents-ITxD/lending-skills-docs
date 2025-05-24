@@ -8,7 +8,7 @@ const config = {
   tagline: 'Documentation make the world go round',
   favicon: 'img/favico.svg',
   url: 'https://your-docusaurus-site.example.com',
-  baseUrl: '/',
+  baseUrl: '/ITxD-docs/',
 
   organizationName: 'facebook',
   projectName: 'docusaurus',
